@@ -1,0 +1,64 @@
+// style.scss
+// ==============
+
+//Compass imports
+@import "compass";
+@import "compass/css3/box-shadow";
+
+//Core partials
+@import "variables";
+@import "mixins";
+@import "base";
+@import "modules";
+
+// JS partials
+@import "pixgrid";
+@import "rclick";
+
+
+.potterypix {
+  @include backImage('../images/backgrounds/pottery_workshop.jpg');
+  border-bottom: 50px solid $darkGreenGold;
+} //venue
+
+.aboutvenue {
+  img {
+    float: right;
+  }
+}
+
+.workshoppix {
+  @include backImage('../images/backgrounds/woodworking_workshop.jpg');
+  border-bottom: 50px solid $darkGreenGold;
+} //workshops
+
+.ontour {
+  h1 {
+    color: lighten($purple, 5);
+    font-size: 3em;
+    bottom: 10px;
+    right: 10%;
+  }
+
+  h2 {
+    font-size: 1.8em;
+    color: $darkGreenGold;
+    border-top: 1px solid $darkGreenGold;
+    padding-top: 5px;
+  } //h3
+
+  h3 {
+    font-size: 1.3em;
+    color: lighten($purple, 15);
+    padding-bottom: 5px;
+  } //h4
+
+  img {
+    float: right;
+    @include border-radius(50%);
+    padding-left: 20px;
+    width:20%;
+    min-width: 120px;
+    max-width: 160px;
+  } //img
+} //ontour
